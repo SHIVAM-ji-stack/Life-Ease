@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+      background: #f4f4f4;
+    }
+    .page-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label, input {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+    }
+    input {
+      padding: 8px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #0078d7;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+    .error {
+      color: red;
+      margin-top: 5px;
+      white-space: pre-line; /* to respect new lines in error messages */
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #555;
+      background: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="content">
+      <h2>Registration Form</h2>
+      <form id="myForm">
+        <label>
+          Name:
+          <input type="text" id="name" name="name" required minlength="3" placeholder="Enter your name">
+        </label>
+        <label>
+          Email:
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </label>
+        <label>
+          Age:
+          <input type="number" id="age" name="age" required min="18" max="100" placeholder="Enter your age">
+        </label>
+        <button type="submit">Submit</button>
+        <div class="error" id="errorMsg"></div>
+      </form>
+    </div>
+
+    <footer>
+      <p>Created by Shivam Mishra</p>
+      <p>&copy; 2025 LifeEase. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // JS validation
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // stop form from submitting
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const age = parseInt(document.getElementById('age').value);
+      const errorMsg = document.getElementById('errorMsg');
+
+      let errors = [];
+
+      if (name.length < 3) {
+        errors.push("Name must be at least 3 characters long.");
+      }
+
+      if (!email.includes('@')) {
+        errors.push("Email must contain '@'.");
+      }
+
+      if (isNaN(age) || age < 18 || age > 100) {
+        errors.push("Age must be between 18 and 100.");
+      }
+
+      if (errors.length > 0) {
+        errorMsg.innerText = errors.join("\n");
+      } else {
+        errorMsg.innerText = '';
+        alert("Form submitted successfully!");
+      }
+    });
+  </script>
+</body>
+</html>

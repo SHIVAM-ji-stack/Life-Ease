@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - LifeEase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #4CAF50;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5em;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #3a9442;
+      border-radius: 5px;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #4CAF50;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Marquee Section */
+    .marquee-container {
+      margin: 40px auto;
+      background: white;
+      padding: 15px;
+      width: 90%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .marquee-container img {
+      height: 150px;
+      margin: 0 20px;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer mark {
+      background-color: transparent;
+      color: #fbc02d;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">LifeEase</div>
+    <ul>
+      <li><a href="todo.html">To Do List</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="forgot.html">Forgot Password</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>About Us</h1>
+    <p>
+      Welcome to my mini project! I am dedicated to provide useful tools such as a To Do List, Calculator, and helpful Guidance to make your daily tasks easier. I am passionate about creating simple, user-friendly solutions for everyone. If you ever forget your password, our Forgot Password feature is here to help you regain access quickly and securely.
+    </p>
+    <p>
+      Thank you for visiting my About Us page. I hope you enjoy using our services!
+    </p>
+  </div>
+
+  <!-- Marquee Image Section -->
+  <div class="marquee-container">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      <img src="focus.jpeg" alt="Focus">
+      <img src="balance.png" alt="Balance">
+      <img src="success.jpeg" alt="Success">
+    </marquee>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p><mark>Created by Shivam Mishra</mark></p>
+    <p><mark>&copy; 2025 LifeEase. All rights reserved.</mark></p>
+  </footer>
+
+</body>
+</html>

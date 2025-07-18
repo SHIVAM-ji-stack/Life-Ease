@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Forgot Password</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .forgot-password-container {
+      background: #fff;
+      padding: 32px 28px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .forgot-password-container h2 {
+      margin-bottom: 18px;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .forgot-password-container label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .forgot-password-container input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    .forgot-password-container button {
+      width: 100%;
+      padding: 10px;
+      background: #0078d4;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .forgot-password-container button:hover {
+      background: #005fa3;
+    }
+
+    .forgot-password-container p {
+      margin-top: 14px;
+      color: #666;
+      font-size: 0.95em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      background: #e9ecf3;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <div class="forgot-password-container">
+      <div class="logo">
+        <img src="LifeEase2.jpeg" alt="Library Logo" style="max-width: 100px; display: block; margin: 0 auto;" />
+      </div>
+      <h2>Forgot Password</h2>
+      <form>
+        <label for="email">Enter your Email ID</label>
+        <input type="email" id="email" name="email" required placeholder="" />
+        <button type="submit">Send Code</button>
+      </form>
+      <p>We will send a code to your email to help you re-generate your password.</p>
+    </div>
+  </div>
+  <footer>
+    <p>Made by Shivam Mishra</p>
+    <p>© 2025 LifeEase. All rights reserved.</p>
+  </footer>
+</body>
+</html>
